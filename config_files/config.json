@@ -4,7 +4,7 @@
         "max_retries": 2,
         "max_concurrent": 10,
         "use_playwright": false,
-        "use_selenium": true,
+        "use_selenium": false,
         "retry_without_compression": true,
         "allow_direct_fallback": false,
         "min_content_length": 500
