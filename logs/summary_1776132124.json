@@ -1,0 +1,44 @@
+{
+  "total": 500,
+  "success": 420,
+  "failed_http": 72,
+  "failed_extract": 8,
+  "blocked": 0,
+  "timeout": 2,
+  "success_rate": 84.0,
+  "by_method": {
+    "trafilatura": 331,
+    "Selenium": 166,
+    "raw_text": 3
+  },
+  "by_page_type": {
+    "html": 386,
+    "error": 70,
+    "json": 3,
+    "spa": 8,
+    "pdf": 3,
+    "docs": 11,
+    "article": 19
+  },
+  "by_status": {
+    "200": 427,
+    "404": 25,
+    "202": 1,
+    "403": 30,
+    "503": 1,
+    "502": 10,
+    "412": 1,
+    "406": 1,
+    "408": 2,
+    "500": 2
+  },
+  "latency": {
+    "avg": 7.32,
+    "min": 0.56,
+    "p50": 3.74,
+    "p90": 14.89,
+    "p95": 20.3,
+    "p99": 34.16,
+    "max": 82.16
+  }
+}
