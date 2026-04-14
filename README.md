@@ -219,4 +219,7 @@ Make sure Chrome is installed. The `webdriver-manager` will download the appropr
 ## License
 
 MIT (for assignment purposes)
-```
+
+## Author
+Alisa Rakhlina
+aliska76@gmail.com
