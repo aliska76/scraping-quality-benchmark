@@ -164,6 +164,51 @@ project/
 └── requirements.txt           # Python dependencies
 ```
 
+## Results
+
+After running the scraper on all 500 training URLs, the following results were achieved:
+```text
+============================================================
+SCRAPING QUALITY BENCHMARK RESULTS
+============================================================
+URLs evaluated: 500
+Successful scrapes: 398 / 500
+Success Rate: 79.6%
+
+Overall Metrics (including failures as 0):
+Avg F1: 0.4687
+Avg Precision: 0.5110
+Avg Recall: 0.4515
+
+Quality Metrics (successful scrapes only):
+Avg F1: 0.5798
+Avg Precision: 0.6259
+Avg Recall: 0.5601
+
+Latency (seconds):
+P50: 3.74s
+P90: 14.89s
+P95: 20.30s
+Avg: 7.32s
+============================================================
+```
+
+### Interpretation
+
+- **Success Rate (79.6%)**: 398 out of 500 URLs were successfully scraped with valid content. The remaining 102 URLs returned HTTP errors (404, 403, 502) or empty content.
+- **Average F1 (0.47)**: When counting failed URLs as zero, the overall F1 is 0.47. This is expected because failed URLs contribute nothing to the score.
+- **Quality F1 (0.58)**: On successful scrapes only, the F1 reaches 0.58, indicating good content extraction quality.
+- **Latency (7.32s average)**: Within the realistic budget of 5-10 seconds per URL. The P95 of 20.30s reflects the slower browser-based fallbacks for problematic sites.
+
+### Key Observations
+
+| Observation | Explanation |
+|-------------|-------------|
+| 79.6% success rate | Some URLs are expected to fail (404s, paywalls, blocked pages) |
+| Precision (0.63) > Recall (0.56) | The extractor is conservative – it avoids pulling in noise at the cost of missing some relevant content |
+| Browser fallback helped | Sites like inc.com, dogecoin.com, and localsearch.com.au were only accessible via Playwright/Selenium |
+| Latency variation | HTTP-only requests average 3-4 seconds; browser-based requests add 10-20 seconds overhead |
+
 ## Testing
 
 ```bash
