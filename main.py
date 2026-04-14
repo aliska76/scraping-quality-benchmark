@@ -1,4 +1,3 @@
-# main.py
 """
 Main entry point for the scraping pipeline.
 """
