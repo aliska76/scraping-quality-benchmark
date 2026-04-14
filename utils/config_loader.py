@@ -56,7 +56,7 @@ class Config:
             },
             "proxy": {
                 "enabled": True
-            },
+            }
         }
     
     def _load_json(self, path: Path) -> Optional[Dict[str, Any]]:
