@@ -94,6 +94,11 @@ Proxy credentials are stored in `proxy.json` (provided with the assignment). The
 - Hostname and port (HTTP port 65534 is used for requests)
 - Falls back to direct connection only if `allow_direct_fallback=true`
 
+## Documentation
+
+Detailed system architecture, component design, and design decisions are documented in:
+
+- **System Design Document.pdf** – complete design overview
 
 ## Usage
 
