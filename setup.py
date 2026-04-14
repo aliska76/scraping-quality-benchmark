@@ -121,7 +121,7 @@ def setup():
     # Step 5: Create directories
     print_step("Step 5: Creating project directories...")
     
-    directories = ["results", "logs", "data"]
+    directories = ["results", "logs"]
     for dir_name in directories:
         Path(dir_name).mkdir(exist_ok=True)
         print(f"   [DIR] {dir_name}/")
