@@ -8,7 +8,7 @@ import argparse
 from pathlib import Path
 from typing import List, Optional
 
-from models import ScrapeRequest, ScrapeResult
+from models import ScrapeRequest
 from scraper.fetcher import HTTPFetcher
 from scraper.browser import PlaywrightFetcher
 from pipeline import ScraperPipeline
