@@ -1,4 +1,3 @@
-# pipeline.py
 """
 Orchestrates the scraping process with chain of fetchers.
 """
