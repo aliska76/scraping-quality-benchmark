@@ -1,4 +1,3 @@
-# tests/conftest.py
 """
 Pytest configuration and shared fixtures with mocked config.
 """
